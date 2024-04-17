@@ -1,0 +1,62 @@
+syntax "javascript" "\.(mjs)|(cjs)|(js)|(jsx)|(json)$"
+
+## Default
+color white "^.+$"
+
+## Decimal, cotal and hexadecimal numbers
+color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+
+## Floating point number with at least one digit before decimal point
+color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+
+## Keywords
+color green "\<(abstract|await|boolean|break|byte|case|catch|char)\>"
+color green "\<(class|const|continue|debugger|default|delete|double)\>"
+color green "\<(do|else|enum|export|extends|finally|final|float|for)\>"
+color green "\<(from|function|goto|if|implements|import|instanceof)\>"
+color green "\<(interface|int|in|let|long|native|new|package|private)\>"
+color green "\<(protected|public|return|short|static|super|switch)\>"
+color green "\<(synchronized|this|throws|throw|transient|try|typeof)\>"
+color green "\<(var|void|volatile|while|with|yield)\>"
+
+
+## Type specifiers
+color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
+color red "\<(Number|Object|RegExp|String)\>"
+color red "\<(true|false)\>"
+
+## String
+color brightyellow "L?\"(\\"|[^"])*\""
+color brightyellow "L?'(\'|[^'])*'"
+color brightcyan "L?`(\`|[^`])*`"
+color brightwhite,blue start="\$\{" end="\}"
+
+## Escapes
+color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+
+## Comments
+color magenta start="/\*" end="\*/"
+color magenta "//.*$"
+
+## JSX Attributes
+color brightblue "\<(key|ref|defaultValue|dangerouslySetInnerHTML|suppressContentEditableWarning|suppressHydrationWarning|autoFocus|contentEditable|spellCheck)\>"
+
+## Emphasis tags
+color brightwhite start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
+
+## Tags
+color red start="<" end=">"
+## color brightyellow start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
+color brightyellow ""(\\.|[^"])*""
+
+## Attributes
+color green "[[:space:]](abbr|accept(-charset)?|accesskey|action|[av]?link|alt|archive|axis|background|(bg)?color|border)="
+color green "[[:space:]](cell(padding|spacing)|char(off|set)?|checked|cite|class(id)?|className|compact|code(base|tag)?|cols(pan)?)="
+color green "[[:space:]](content(editable)?|contextmenu|coords|data|datetime|declare|defer|dir|enctype)="
+color green "[[:space:]](for|frame(border)?|headers|height|hidden|href(lang)?|hspace|http-equiv|id|ismap)="
+color green "[[:space:]](label|lang|longdesc|margin(height|width)|maxlength|media|method|multiple)="
+color green "[[:space:]](name|nohref|noresize|noshade|object|on(click|focus|load|mouseover|keypress)|profile|readonly|rel|rev)="
+color green "[[:space:]](rows(pan)?|rules|scheme|scope|scrolling|shape|size|span|src|standby|start|style|summary|pattern)="
+color green "[[:space:]](tabindex|target|text|title|type|usemap|v?align|value(type)?|vspace|width|xmlns|xml:space)="
+color green "[[:space:]](required|disabled|selected)[[:space:]=>]"
