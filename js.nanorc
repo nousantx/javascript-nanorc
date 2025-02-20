@@ -20,7 +20,6 @@ color green "\<(protected|public|return|short|static|super|switch)\>"
 color green "\<(synchronized|this|throws|throw|transient|try|typeof)\>"
 color green "\<(var|void|volatile|while|with|yield)\>"
 
-
 ## Type specifiers
 color red "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
 color red "\<(Number|Object|RegExp|String)\>"
@@ -46,7 +45,8 @@ color brightblue "\<(key|ref|defaultValue|dangerouslySetInnerHTML|suppressConten
 color brightwhite start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
 
 ## Tags
-color red start="<" end=">"
+color red start="</?[A-Za-z]" end=">"
+
 ## color brightyellow start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
 color brightyellow ""(\\.|[^"])*""
 

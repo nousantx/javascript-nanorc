@@ -53,7 +53,8 @@ color brightblue "\<(key|ref|defaultValue|dangerouslySetInnerHTML|suppressConten
 color brightwhite start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
 
 ## Tags
-color red start="<" end=">"
+color red start="</?[A-Za-z]" end=">"
+
 ## color brightyellow start="<([biu]|em|strong)[^>]*>" end="</([biu]|em|strong)>"
 color brightyellow ""(\\.|[^"])*""
 
