@@ -11,7 +11,7 @@ color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
 color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
 
 ## Keywords
-color green "\<(abstract|await|boolean|break|byte|case|catch|char)\>"
+color green "\<(abstract|async|await|boolean|break|byte|case|catch|char)\>"
 color green "\<(class|const|continue|debugger|default|delete|double)\>"
 color green "\<(do|else|enum|export|extends|finally|final|float|for)\>"
 color green "\<(from|function|goto|if|implements|import|instanceof)\>"
