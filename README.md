@@ -1,38 +1,43 @@
-# javascript-nanorc
-Syntax highlighting for javascript and typescript for nanorc.
+Syntax highlighting for JavaScript and TypeScript for the GNU nano text editor.
 
 ## Installation
 
-1. clone the repository:
+1. Clone the repository:
 
-```sh
+```bash
 git clone https://github.com/nousantx/javascript-nanorc.git
 ```
-2. include file:
 
-```sh
+2. Open your nano configuration file:
+
+```bash
 nano ~/.nanorc
 ```
 
-or
+3. Add the following lines (adjust the path to where you cloned the repository):
 
-```sh
-nano /etc/.nanorc
-```
-
-3. Inside of `.nanorc`:
-
-Let's say the configuration file is on /home/javascript-nanorc :
 ```sh
 include ~/javascript-nanorc/js.nanorc
 include ~/javascript-nanorc/ts.nanorc
 ```
 
-## Syntax Highlighting Support
+## Supported File Types
 
-- js
-- mjs
-- cjs
-- json
-- ts
-- tsx
+- `.js` - JavaScript
+- `.mjs` - ES Module JavaScript
+- `.cjs` - CommonJS
+- `.jsx` - JavaScript with JSX
+- `.json` - JSON
+- `.ts` - TypeScript
+- `.tsx` - TypeScript with JSX
+
+## Usage
+
+After installation, open any JavaScript or TypeScript file in nano:
+
+```bash
+nano myfile.js
+nano myfile.ts
+```
+
+Syntax highlighting will be applied automatically based on the file extension.
